@@ -18,7 +18,7 @@
         use-xdg-base-directories = true;
         warn-dirty = false;
         auto-optimise-store = true;
-        allow-imports-from-derivation = false;
+        allow-import-from-derivation = false;
         experimental-features = [
           "pipe-operators"
           "nix-command"

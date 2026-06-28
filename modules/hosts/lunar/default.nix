@@ -14,7 +14,7 @@ in
       specialArgs = {
         inherit self' inputs';
       };
-      modules =  [
+      modules = [
         inputs.home-manager.nixosModules.default
         nm.default
         nm.lunar

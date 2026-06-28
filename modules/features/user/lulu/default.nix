@@ -22,12 +22,16 @@ in
         isNormalUser = true;
         description = user.desc;
         extraGroups = user.groups;
+        password = "changeme";
       };
+
       home-manager = {
         extraSpecialArgs = { inherit inputs constants user; };
         users.${user.name}.imports = [
           flakeHomeModules.${user.name}
+
           flakeHomeModules.hyprland
+          flakeHomeModules.default
         ];
       };
     };

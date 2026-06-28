@@ -1,5 +1,5 @@
 {
-  nm.default =
+  nm.desktop =
     { lib, pkgs, ... }:
     {
       options.wrappers.hyprland =
@@ -12,7 +12,7 @@
           package = lib.mkPackageOption pkgs "hyprland" { };
 
           withAutostart = mkEnableOption "autoStart" // {
-            default = true;
+            default = false;
           };
           withXwayland = mkEnableOption "XWayland" // {
             default = true;

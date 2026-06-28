@@ -1,5 +1,5 @@
 {
-  nm.hyprland-config =
+  nm.desktop =
     {
       config,
       pkgs,
@@ -154,14 +154,11 @@
     {
       pkgs,
       lib,
-      config,
+      hyprlandCfg ? null,
+      hyprlandLua ? "",
+      hyprlandLuaConfigFiles ? { },
       ...
     }:
-    let
-      hyprlandCfg = config._module.args.hyprlandCfg or null;
-      hyprlandLua = config._module.args.hyprlandLua or "";
-      hyprlandLuaConfigFiles = config._module.args.hyprlandLuaConfigFiles or { };
-    in
     lib.mkIf (hyprlandCfg != null) {
       xdg.configFile = lib.mkMerge [
         {

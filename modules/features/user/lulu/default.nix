@@ -1,0 +1,34 @@
+{ config, ... }:
+let
+  user = {
+    name = "lulu";
+    desc = "lulu";
+    groups = [
+      "networkmanager"
+      "wheel"
+    ];
+  };
+  flakeHomeModules = config.flake.homeModules;
+in
+{
+  nm.default =
+    {
+      inputs,
+      constants,
+      ...
+    }:
+    {
+      users.users.${user.name} = {
+        isNormalUser = true;
+        description = user.desc;
+        extraGroups = user.groups;
+      };
+      home-manager = {
+        extraSpecialArgs = { inherit inputs constants user; };
+        users.${user.name}.imports = [
+          flakeHomeModules.${user.name}
+          flakeHomeModules.hyprland
+        ];
+      };
+    };
+}

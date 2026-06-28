@@ -41,5 +41,6 @@
     hyprland.url = "github:hyprwm/Hyprland/tags/v0.55.4";
     nixos-core.url = "github:manic-systems/nixos-core/refs/tags/v1.0.1";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    yazi.url = "github:sxyazi/yazi";
   };
 }

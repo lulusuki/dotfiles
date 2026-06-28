@@ -27,6 +27,9 @@ in
 
       home-manager = {
         extraSpecialArgs = { inherit inputs constants user; };
+        useGlobalPkgs = true;
+        useUserPackages = true;
+
         users.${user.name}.imports = [
           flakeHomeModules.${user.name}
 

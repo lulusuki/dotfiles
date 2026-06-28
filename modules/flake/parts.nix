@@ -12,8 +12,10 @@
   perSystem =
     { system, ... }:
     let
-      config.allowUnfree = true;
-      pkgs = import inputs.nixpkgs { inherit system config; };
+      pkgs = import inputs.nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
     in
     {
       # initialize the pkgs for perSystem to be the patched nixpkgs

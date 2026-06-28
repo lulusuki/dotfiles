@@ -22,7 +22,7 @@ in
         isNormalUser = true;
         description = user.desc;
         extraGroups = user.groups;
-        password = "changeme";
+        hashedPassword = "$6$MqJ/pq/ts0hM/jTe$4S8Ki/VjBps6OGuBonwvOrPZIWB3oXRKM9xpDWkhGzGwAonPNigndYG6aqd6HQH.z9LovZgonVFaY.ag/5E4N0";
       };
 
       home-manager = {

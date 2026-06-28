@@ -13,9 +13,9 @@
 
       local mainMod = "SUPER"
 
-      hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(opts.terminal))
-      hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(opts.fileManager))
-      hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(opts.menu))
+      hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
+      hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+      hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 
       hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
       hl.bind(mainMod .. " + C", hl.dsp.window.close())

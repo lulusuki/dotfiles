@@ -19,6 +19,7 @@ in
         nm.default
         nm.lunar
         nm.desktop
+        nm.nvidia
       ];
     }
   );

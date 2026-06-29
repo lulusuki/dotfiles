@@ -2,6 +2,7 @@
 {
 
   inputs.yazi.url = "github:sxyazi/yazi";
+
   hm.default =
     {
       pkgs,
@@ -44,6 +45,11 @@
         plugins = {
           audio-preview = audio-preview;
         };
+      };
+
+      xdg.configFile."yazi/flavors" = {
+        source = ./flavors;
+        recursive = true;
       };
     };
 }

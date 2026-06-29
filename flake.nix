@@ -42,6 +42,14 @@
     nixcord.url = "github:FlameFlag/nixcord";
     nixos-core.url = "github:manic-systems/nixos-core/refs/tags/v1.0.1";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     yazi.url = "github:sxyazi/yazi";
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 }

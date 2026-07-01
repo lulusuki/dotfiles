@@ -6,6 +6,7 @@
 }:
 let
   nm = config.nm;
+  hm = config.hm;
 in
 {
   flake.nixosConfigurations.solar = withSystem "x86_64-linux" (
@@ -13,6 +14,7 @@ in
     inputs.nixpkgs.lib.nixosSystem {
       specialArgs = {
         inherit self' inputs';
+        hostname = "solar";
       };
       modules = [
         inputs.home-manager.nixosModules.default

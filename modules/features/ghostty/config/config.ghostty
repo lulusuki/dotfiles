@@ -1,3 +1,4 @@
 theme = Catppuccin Macchiato
 background-opacity = 0.5
 
+custom-shader = ~/.config/ghostty/shaders/retro-terminal.glsl

@@ -3,9 +3,13 @@
     programs.kitty = {
       enable = true;
       extraConfig = ''
-        font_size 10
+        confirm_os_window_close 0
+        paste_actions no-op
+        clipboard_control write-clipboard write-primary read-clipboard read-primary
+
+        font_size 10.5
         font_family JetBrainsMono Nerd Font
-         
+
         # The basic colors
         foreground              #CAD3F5
         background              #24273A

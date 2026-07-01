@@ -15,12 +15,6 @@
         scale = "1",
       })
 
-      -- Capture card
-      hl.monitor({
-        output = "desc:Integrated Tech Express Inc ITE6802",
-        mirror = "eDP-2",
-      })
-
       -------------------
       -- General Looks --
       -------------------
@@ -42,6 +36,10 @@
 
             noise = 0.05
           }
+        },
+
+        cursor = {
+          no_hardware_cursors = 1
         },
       })
 

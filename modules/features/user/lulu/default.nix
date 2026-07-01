@@ -15,6 +15,7 @@ in
     {
       inputs,
       constants,
+      hostname,
       ...
     }:
     {
@@ -26,7 +27,7 @@ in
       };
 
       home-manager = {
-        extraSpecialArgs = { inherit inputs constants user; };
+        extraSpecialArgs = { inherit inputs constants user hostname; };
         useGlobalPkgs = true;
         useUserPackages = true;
 

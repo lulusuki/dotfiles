@@ -9,6 +9,11 @@
     environment.systemPackages = with pkgs; [
       mpv
       inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+      (vivaldi.override {
+        proprietaryCodecs = true;
+        enableWidevine = false;
+      })
+      vivaldi-ffmpeg-codecs
     ];
   };
 
